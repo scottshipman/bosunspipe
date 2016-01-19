@@ -6,6 +6,10 @@ html, body {
   padding: 0px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* Toolbar area */
 
 .menu {
@@ -16,8 +20,60 @@ html, body {
   width: 36px;
 }
 
+md-toolbar {
+  background-color: #212121;
+}
 md-toolbar h1 {
   margin: auto;
+  color: white;
+  font-weight: 100;
+}
+
+md-sidenav {
+  background-color: #212121;
+  color: white;
+  height: 100%;
+  position: fixed;
+  width: 220px;
+}
+
+
+@media only screen and (max-width: 1999px) and (min-width: 1500px) {
+  md-card {
+    width: calc((100vw - 400px) / 4) !important;
+    height: calc(((100vw - 320px) / 5.33 ) + 60px) !important;
+    overflow:hidden !important;
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 1499px) and (min-width: 1000px) {
+  md-card {
+    width: calc((100vw - 375px) / 3) !important;
+    height: calc(((100vw - 300px) / 4 ) + 60px) !important;
+    overflow: hidden !important;
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 999px) and (min-width: 800px) {
+  md-card {
+    width: calc((100vw - 280px) / 2) !important;
+    height: calc(((100vw - 280px) / 2.66 ) + 60px) !important;
+    overflow: hidden !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  md-card {
+    width: calc((100vw - 260px) / 1) !important;
+    height: calc(((100vw - 260px) / 1.33 ) + 60px) !important;
+    overflow: hidden !important;
+  }
+}
+
+md-card:hover {
+  box-shadow: 0 6px 20px #AFAFAF;
 }
 
 /* Sidenav area */
@@ -36,6 +92,14 @@ md-list .md-button {
     padding: 0px 0px 8px 0px;
   }
 
+  md-sidenav  md-list md-list-item {
+    /*border-top: 1px groove #ccc;*/
+    border-bottom: 1px groove #ccc;
+  }
+
+  md-sidenav  md-list md-list-item:hover {
+    background: #555;
+  }
 
 /* Primary content area */
 
@@ -47,6 +111,7 @@ md-list .md-button {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 5px;
+  margin-left: 220px;
 }
 
 #content .md-button.contact {
