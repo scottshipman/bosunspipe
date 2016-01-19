@@ -10,7 +10,8 @@ App.controller("FeedCtrl", ['$scope','FeedService', function ($scope,Feed) {
             $scope.feeds=res.data.responseData.feed.entries;
             var findFirstImage = $scope.feeds[0].content;
             angular.forEach($scope.feeds,function(value){
-              var firstImage = $(value.content).find('img').eq(0).attr('src');
+
+              // var firstImage = $(value.content).find('img').eq(0).attr('src');
               console.log(value.content);
             });
           var firstImage = $(findFirstImage).find('img').eq(0).attr('src');
