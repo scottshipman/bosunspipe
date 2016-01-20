@@ -120,7 +120,7 @@
 
   <md-content flex id="content">
     <md-card ng-repeat="feed in feeds | filter:filterText">
-      <a href="{{feed.link}}/?ref=projectblack" target="_blank">
+      <a href="{{feed.link}}/?ref=projectblack" target="_blank" style="text-decoration:none;">
         <md-card-title-media>
           <img style="max-height: 280px;"class="md-media-md" src="{{feed.mediaGroups[0].contents[0].url}}">
           <div ng-if="feed.mediaGroups[0].contents[0].url == undefined">
@@ -129,7 +129,10 @@
           <md-card-title-media>
             <md-card-content>
               <h4 style="color: #555; text-decoration: none;">{{feed.title}}</h5>
-                <p>{{feed.author}}</p>
+                <!-- <p>{{feed.author}}</p> -->
+                <div ng-if="feed.mediaGroups[0].contents[0].url == undefined || feed.img == undefined">
+                  <p style="text-decoration:none; color:black;">{{feed.contentSnippet}}</p>
+                </div>
                 <!-- <p>{{feed.categories}}</p>  -->
                 <!-- {{feed}} -->
                 <!-- <p class="text-left">{{feed.contentSnippet}}</p> -->
