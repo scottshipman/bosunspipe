@@ -156,12 +156,12 @@
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script> -->
 
 
-    <script src="./src/feed.js"></script>
-    <script src='./src/angular-route.js'></script>
+    <script src="app/src/feed.js"></script>
+    <script src='app/src/angular-route.js'></script>
 
     <!-- JQuery -->
 
-    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-1.10.2.js"></script> -->
 
     <!-- <script type="text/javascript" src="./src/angular.min.js">
     /**
@@ -173,20 +173,20 @@
   <!-- <script src="./src/users/UserController.js"></script>
   <script src="./src/users/UserService.js"></script> -->
 
-  <script type="text/javascript" src="./src/angular.min.js">
+  <script type="text/javascript" src="app/src/angular.min.js">
 
   angular
   .module('RSSFeedApp', ['ngRoute', 'ngMaterial'])
   .config(function($mdThemingProvider, $mdIconProvider){
 
     $mdIconProvider
-    .defaultIconSet("./assets/svg/avatars.svg", 128)
-    .icon("menu"       , "./assets/svg/menu.svg"        , 24)
-    .icon("share"      , "./assets/svg/share.svg"       , 24)
-    .icon("google_plus", "./assets/svg/google_plus.svg" , 512)
-    .icon("hangouts"   , "./assets/svg/hangouts.svg"    , 512)
-    .icon("twitter"    , "./assets/svg/twitter.svg"     , 512)
-    .icon("phone"      , "./assets/svg/phone.svg"       , 512);
+    .defaultIconSet("app/assets/svg/avatars.svg", 128)
+    .icon("menu"       , "app/assets/svg/menu.svg"        , 24)
+    .icon("share"      , "app/assets/svg/share.svg"       , 24)
+    .icon("google_plus", "app/assets/svg/google_plus.svg" , 512)
+    .icon("hangouts"   , "app/assets/svg/hangouts.svg"    , 512)
+    .icon("twitter"    , "app/assets/svg/twitter.svg"     , 512)
+    .icon("phone"      , "app/assets/svg/phone.svg"       , 512);
 
     $mdThemingProvider.theme('default')
     .primaryPalette('red')
