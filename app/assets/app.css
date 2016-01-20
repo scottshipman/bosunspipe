@@ -29,6 +29,55 @@ md-toolbar h1 {
   font-weight: 100;
 }
 
+md-toolbar .social-icons-container{
+  height: 45px;
+  margin: 0 auto 5px;
+
+}
+md-toolbar .social-icons {
+  padding: 10px;
+  position: relative;
+  margin: 0 5px;
+  top: 25%;
+  transform: translateY(-50%);
+  color: white;
+  display: inline;
+  text-decoration: none;
+  width: 45px;
+  text-align: center;
+  border-radius: 50px;
+  padding: 8px;
+  text-align: center;
+  background-clip: padding-box;
+   -webkit-border-radius: 50%; */
+   border-radius: 50%;
+   box-shadow: rgba(0, 0, 0, 0.4) 0 2px 5px;
+   -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+   transition: all 0.3s ease-out;
+
+}
+md-toolbar .social-icons.facebook{
+  background-color: #3b5998;
+}
+
+md-toolbar .social-icons.linkedin{
+  background-color: #0077b5;
+}
+
+
+md-toolbar i:hover,
+md-toolbar i:active {
+  opacity: .8;
+  box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21), 0 16px 28px 0 rgba(0, 0, 0, 0.22);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
 md-sidenav {
   background-color: #212121;
   color: white;
@@ -68,6 +117,7 @@ md-sidenav {
   md-card {
     width: auto !important;
     height: auto !important;
+    max-width: 400px;
     overflow: hidden !important;
     float: none;
   }
