@@ -157,7 +157,7 @@ md-list .md-button {
 
   md-sidenav  md-list md-list-item {
     /*border-top: 1px groove #ccc;*/
-    border-bottom: 1px groove #ccc;
+    border-top: 1px solid #272727;
   }
 
   md-sidenav  md-list md-list-item:hover {

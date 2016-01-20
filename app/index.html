@@ -1,157 +1,159 @@
 <!DOCTYPE html>
 <html lang="en" >
-  <head>
-    <title>Project Black | The Latest and Greatest in Infosec</title>
+<head>
+  <title>Project Black | The Latest and Greatest in Infosec</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css"/>
-    <link rel="stylesheet" href="assets/app.css"/>
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css"/>
+  <link rel="stylesheet" href="assets/app.css"/>
 
-    <!-- Font Awesome and Material Icons Imports -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-
-    <style type="text/css">
-        /**
-         * Hide when Angular is not yet loaded and initialized
-         */
-        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-          display: none !important;
-        }
-    </style>
-
-  </head>
-
-  <body ng-app="RSSFeedApp" layout="row" data-ng-controller="FeedCtrl" ng-cloak >
+  <!-- Font Awesome and Material Icons Imports -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
-      <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
-                    md-component-id="left"
-                    md-is-locked-open="$mdMedia('gt-sm')">
+  <style type="text/css">
+  /**
+  * Hide when Angular is not yet loaded and initialized
+  */
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+  }
+  </style>
 
-        <md-toolbar class="md-whiteframe-z1">
-          <h1>Project Black</h1>
-          <div class="social-icons-container">
-            <a class="social-icons facebook" href="facebook.com">
-              <i class="fa fa-facebook"></i>
-            </a>
-            <a class="social-icons linkedin" href="linkedin.com">
-              <i class="fa fa-linkedin"></i>
-            </a>
-        </div>
-          <!-- <a class="social-icons" href="facebook.com"><i style="display: inline;" class="fa fa-facebook"></i></a> -->
-        </md-toolbar>
+</head>
 
-        <md-list>
-          <md-list-item>
-                <md-button ng-click="feedSrc='http://news.ycombinator.com/rss';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://news.ycombinator.com/favicon.ico"> Hacker News
-                </md-button>
-          </md-list-item>
-          <md-list-item>
-                <md-button ng-click="feedSrc='http://feeds.feedburner.com/pentestmonkey';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://pentestmonkey.net/favicon.ico"> PenTesting Monkey
-                </md-button>
-          </md-list-item>
-          <md-list-item>
-                <md-button ng-click="feedSrc='http://feeds.feedburner.com/JeremiahGrossman';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://jeremiahgrossman.blogspot.com/favicon.ico"> Jeremiah Grossman
-                </md-button>
-          </md-list-item>
-          <md-list-item>
-                <md-button ng-click="feedSrc='http://feeds.feedburner.com/darknethackers';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.darknet.org.uk/favicon.ico"> DarkNet Hackers
-                </md-button>
-          </md-list-item>
-          <md-list-item>
-              <md-button ng-click="feedSrc='http://feeds.feedburner.com/TechCrunch/';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://techcrunch.com/favicon.ico"> TechCrunch
-              </md-button>
-        </md-list-item>
-        <md-list-item>
-            <md-button ng-click="feedSrc='http://feeds.arstechnica.com/arstechnica/features';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://arstechnica.com/favicon.ico"> ArsTechnica
-            </md-button>
-      </md-list-item>
-      <md-list-item>
-          <md-button ng-click="feedSrc='http://feeds2.feedburner.com/spylogic';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.spylogic.net/favicon.ico"> Spy Logic</md-button>
+<body ng-app="RSSFeedApp" layout="row" data-ng-controller="FeedCtrl" ng-cloak >
+
+
+  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+  md-component-id="left"
+  md-is-locked-open="$mdMedia('gt-sm')">
+
+  <md-toolbar class="md-whiteframe-z1">
+    <h1>Project Black</h1>
+    <div class="social-icons-container">
+      <a class="social-icons facebook" href="http://facebook.com" target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a class="social-icons linkedin" href="htt://linkedin.com" target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+    <!-- <a class="social-icons" href="facebook.com"><i style="display: inline;" class="fa fa-facebook"></i></a> -->
+  </md-toolbar>
+
+  <md-list>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://news.ycombinator.com/rss';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://news.ycombinator.com/favicon.ico"> Hacker News
+      </md-button>
     </md-list-item>
     <md-list-item>
-        <md-button ng-click="feedSrc='http://feeds.feedburner.com/R362Pubs';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.room362.com/favicon.ico"> Room 362</md-button>
-  </md-list-item>
-<a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://blog.portswigger.net/feeds/posts/default';loadFeed($event)">
-  <md-list-item>
-      <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://blog.portswigger.net/favicon.ico"> Portswigger</md-button>
-</md-list-item>
-</a>
-<a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.wired.com/category/threatlevel/feed/';loadFeed($event)">
-  <md-list-item>
-      <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://wired.com/favicon.ico"> Wired Security</md-button>
-</md-list-item>
-</a>
-<a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://threatpost.com/feed/';loadFeed($event)">
-  <md-list-item>
-      <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/favicon.ico"> Threat Post</md-button>
-</md-list-item>
-</a>
-<a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.csoonline.com/index.rss';loadFeed($event)">
-  <md-list-item>
-      <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="./assets/favicons/cso/favicon.ico"> CSO Online</md-button>
-</md-list-item>
-</a>
-<a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.theregister.co.uk/security/headlines.atom';loadFeed($event)">
-  <md-list-item>
-      <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.theregister.co.uk/favicon.ico"> The Register</md-button>
-</md-list-item>
-</a>
-</md-list>
+      <md-button ng-click="feedSrc='http://feeds.feedburner.com/JeremiahGrossman';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://jeremiahgrossman.blogspot.com/favicon.ico"> Jeremiah Grossman
+      </md-button>
+    </md-list-item>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://feeds.feedburner.com/darknethackers';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.darknet.org.uk/favicon.ico"> DarkNet Hackers
+      </md-button>
+    </md-list-item>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://feeds.feedburner.com/TechCrunch/';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://techcrunch.com/favicon.ico"> TechCrunch
+      </md-button>
+    </md-list-item>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://feeds.arstechnica.com/arstechnica/features';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://arstechnica.com/favicon.ico"> ArsTechnica
+      </md-button>
+    </md-list-item>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://feeds2.feedburner.com/spylogic';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.spylogic.net/wp-content/themes/black-hat/images/favicon.ico"> Spy Logic</md-button>
+    </md-list-item>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://feeds.feedburner.com/R362Pubs';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.room362.com/favicon.ico"> Room 362</md-button>
+      </md-list-item>
+    </a>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://blog.portswigger.net/feeds/posts/default';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://blog.portswigger.net/favicon.ico"> Portswigger</md-button>
+      </md-list-item>
+    </a>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.wired.com/category/threatlevel/feed/';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://wired.com/favicon.ico"> Wired Security</md-button>
+      </md-list-item>
+    </a>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://threatpost.com/feed/';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/favicon.ico"> Threat Post</md-button>
+      </md-list-item>
+    </a>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://feeds.feedburner.com/pentestmonkey';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://jeremiahgrossman.blogspot.com/favicon.ico"> PenTesting Monkey
+      </md-button>
+    </md-list-item>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.csoonline.com/index.rss';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="./assets/favicons/cso/favicon.ico"> CSO Online</md-button>
+      </md-list-item>
+    </a>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.theregister.co.uk/security/headlines.atom';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.theregister.co.uk/favicon.ico"> The Register</md-button>
+      </md-list-item>
+    </a>
+  </md-list>
 </md-sidenav>
 
 
 
 
-        <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+<div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
 
-          <md-toolbar layout="row" class="md-whiteframe-z1">
-            <!-- <h1>Project Black</h1> -->
-          </md-toolbar>
+  <md-toolbar layout="row" class="md-whiteframe-z1">
+    <!-- <h1>Project Black</h1> -->
+  </md-toolbar>
 
-          <md-content flex id="content">
-              <md-card ng-repeat="feed in feeds | filter:filterText">
-                <a href="{{feed.link}}/?ref=projectblack">
-              <md-card-title-media>
-                <img style="max-height: 280px;"class="md-media-md" src="{{feed.mediaGroups[0].contents[0].url}}">
-              <md-card-title-media>
-              <md-card-content>
-                  <h4 style="color: #555; text-decoration: none;">{{feed.title}}</h5>
-                    <p>{{feed.author}}</p>
-                    <!-- <p>{{feed.categories}}</p>  -->
-                  <!-- {{feed}} -->
-              <!-- <p class="text-left">{{feed.contentSnippet}}</p> -->
+  <md-content flex id="content">
+    <md-card ng-repeat="feed in feeds | filter:filterText">
+      <a href="{{feed.link}}/?ref=projectblack" target="_blank">
+        <md-card-title-media>
+          <img style="max-height: 280px;"class="md-media-md" src="{{feed.mediaGroups[0].contents[0].url}}">
+          <md-card-title-media>
+            <md-card-content>
+              <h4 style="color: #555; text-decoration: none;">{{feed.title}}</h5>
+                <p>{{feed.author}}</p>
+                <!-- <p>{{feed.categories}}</p>  -->
+                <!-- {{feed}} -->
+                <!-- <p class="text-left">{{feed.contentSnippet}}</p> -->
               </md-card-content>
 
               <!-- <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
               <h2>{{ul.selected.name}}</h2>
               <p>{{ul.selected.content}}</p> -->
 
-                <!-- <md-button class="contact" md-no-ink ng-click="ul.showContactOptions($event)" aria-label="Contact User">
-                  <md-tooltip>Contact {{ ul.selected.name }}</md-tooltip>
-                  <md-icon md-svg-icon="share"></md-icon>
-                </md-button> -->
-                </a>
-              </md-card>
-            </md-content>
+              <!-- <md-button class="contact" md-no-ink ng-click="ul.showContactOptions($event)" aria-label="Contact User">
+              <md-tooltip>Contact {{ ul.selected.name }}</md-tooltip>
+              <md-icon md-svg-icon="share"></md-icon>
+            </md-button> -->
+          </a>
+        </md-card>
+      </md-content>
 
-        </div>
+    </div>
 
-  <!-- Angular Material requires Angular.js Libraries -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
 
-  <!-- Angular Material Library -->
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script> -->
+    <!-- Angular Material Library -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script> -->
 
 
     <script src="./src/feed.js"></script>
@@ -162,37 +164,37 @@
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
 
     <!-- <script type="text/javascript" src="./src/angular.min.js">
-      /**
-       * You must include the dependency on 'ngMaterial'
-       */
-      angular.module('RSSFeedApp', ['ngMaterial']);
-    </script> -->
+    /**
+    * You must include the dependency on 'ngMaterial'
+    */
+    angular.module('RSSFeedApp', ['ngMaterial']);
+  </script> -->
 
-    <!-- <script src="./src/users/UserController.js"></script>
-    <script src="./src/users/UserService.js"></script> -->
+  <!-- <script src="./src/users/UserController.js"></script>
+  <script src="./src/users/UserService.js"></script> -->
 
-    <script type="text/javascript" src="./src/angular.min.js">
+  <script type="text/javascript" src="./src/angular.min.js">
 
-          angular
-              .module('RSSFeedApp', ['ngRoute', 'ngMaterial'])
-              .config(function($mdThemingProvider, $mdIconProvider){
+  angular
+  .module('RSSFeedApp', ['ngRoute', 'ngMaterial'])
+  .config(function($mdThemingProvider, $mdIconProvider){
 
-                  $mdIconProvider
-                      .defaultIconSet("./assets/svg/avatars.svg", 128)
-                      .icon("menu"       , "./assets/svg/menu.svg"        , 24)
-                      .icon("share"      , "./assets/svg/share.svg"       , 24)
-                      .icon("google_plus", "./assets/svg/google_plus.svg" , 512)
-                      .icon("hangouts"   , "./assets/svg/hangouts.svg"    , 512)
-                      .icon("twitter"    , "./assets/svg/twitter.svg"     , 512)
-                      .icon("phone"      , "./assets/svg/phone.svg"       , 512);
+    $mdIconProvider
+    .defaultIconSet("./assets/svg/avatars.svg", 128)
+    .icon("menu"       , "./assets/svg/menu.svg"        , 24)
+    .icon("share"      , "./assets/svg/share.svg"       , 24)
+    .icon("google_plus", "./assets/svg/google_plus.svg" , 512)
+    .icon("hangouts"   , "./assets/svg/hangouts.svg"    , 512)
+    .icon("twitter"    , "./assets/svg/twitter.svg"     , 512)
+    .icon("phone"      , "./assets/svg/phone.svg"       , 512);
 
-                      $mdThemingProvider.theme('default')
-                          .primaryPalette('red')
-                          .accentPalette('red');
+    $mdThemingProvider.theme('default')
+    .primaryPalette('red')
+    .accentPalette('red');
 
-              });
+  });
 
-    </script>
+  </script>
 
-  </body>
+</body>
 </html>
