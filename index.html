@@ -53,10 +53,11 @@
       <md-button ng-click="feedSrc='http://news.ycombinator.com/rss';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://news.ycombinator.com/favicon.ico"> Hacker News
       </md-button>
     </md-list-item>
-    <md-list-item>
-      <md-button ng-click="feedSrc='http://feeds.feedburner.com/JeremiahGrossman';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://jeremiahgrossman.blogspot.com/favicon.ico"> Jeremiah Grossman
-      </md-button>
-    </md-list-item>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.csoonline.com/index.rss';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="app/assets/favicons/cso/favicon.ico"> CSO Online</md-button>
+      </md-list-item>
+    </a>
     <md-list-item>
       <md-button ng-click="feedSrc='http://feeds.feedburner.com/darknethackers';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.darknet.org.uk/favicon.ico"> DarkNet Hackers
       </md-button>
@@ -101,16 +102,15 @@
       <md-button ng-click="feedSrc='http://feeds.feedburner.com/pentestmonkey';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://jeremiahgrossman.blogspot.com/favicon.ico"> PenTesting Monkey
       </md-button>
     </md-list-item>
-    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.csoonline.com/index.rss';loadFeed($event)">
-      <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="app/assets/favicons/cso/favicon.ico"> CSO Online</md-button>
-      </md-list-item>
-    </a>
     <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.theregister.co.uk/security/headlines.atom';loadFeed($event)">
       <md-list-item>
         <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.theregister.co.uk/favicon.ico"> The Register</md-button>
       </md-list-item>
     </a>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://feeds.feedburner.com/JeremiahGrossman';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://jeremiahgrossman.blogspot.com/favicon.ico"> Jeremiah Grossman
+      </md-button>
+    </md-list-item>
     <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://rss.slashdot.org/Slashdot/slashdotMain';loadFeed($event)">
       <md-list-item>
         <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://slashdot.org/favicon.ico"> SlashDot</md-button>
