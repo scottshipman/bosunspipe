@@ -140,7 +140,7 @@
             <md-card-content>
               <h4 style="color: #555; text-decoration: none;">{{feed.title}}</h5>
                 <!-- <p>{{feed.author}}</p> -->
-                <div ng-if="feed.mediaGroups[0].contents[0].url == undefined || feed.img == undefined">
+                <div ng-if="feed.mediaGroups[0].contents[0].url == undefined && feed.img == undefined">
                   <p style="text-decoration:none; color:black; background-color:'#'++(Math.random()*0xFFFFFF<<0).toString(16);">{{feed.contentSnippet}}</p>
                 </div>
                 <!-- <p>{{feed.categories}}</p>  -->
