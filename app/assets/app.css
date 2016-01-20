@@ -101,6 +101,12 @@ md-sidenav {
   max-width: 220px;
 }
 
+.md-media-md  {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+
 
 @media only screen and (max-width: 1999px) and (min-width: 1500px) {
   md-card {
@@ -251,7 +257,6 @@ md-button.menuBtn > md-icon {
 
 #content img {
   display: block;
-  height: auto;
   max-width: 500px;
 }
 

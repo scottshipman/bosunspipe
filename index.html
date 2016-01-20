@@ -142,7 +142,7 @@
     <md-card ng-repeat="feed in feeds | filter:filterText">
       <a href="{{feed.link}}/?ref=projectblack" target="_blank" style="text-decoration:none;">
         <md-card-title-media>
-          <img style="max-height: 280px;"class="md-media-md" src="{{feed.mediaGroups[0].contents[0].url}}">
+          <img class="md-media-md" src="{{feed.mediaGroups[0].contents[0].url}}">
           <div ng-if="feed.mediaGroups[0].contents[0].url == undefined">
             <img style="max-height: 200px;"class="md-media-md" src="{{feed.img}}">
           </div>
