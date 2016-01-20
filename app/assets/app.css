@@ -27,6 +27,9 @@ md-toolbar h1 {
   margin: auto;
   color: white;
   font-weight: 100;
+  font-family: din-light,sans-serif;
+  font-family: "Helvetica Neue",helvetica,sans-serif;
+  font-weight: 200;
 }
 
 md-toolbar .social-icons-container{
@@ -160,8 +163,43 @@ md-list .md-button {
     border-top: 1px solid #272727;
   }
 
+  md-sidenav  md-list md-list-item::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    background-color: #2a2a2a;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    /* opacity: .5; */
+}
+md-sidenav  md-list md-list-item {
+display: block;
+/*padding: 1em 0 .8em 20px;*/
+padding-top: 10px;
+padding-bottom: 10px;
+position: relative;
+z-index: 5;
+text-align: left;
+color: #aaa;
+text-decoration: none;
+font-weight: 200!important;
+font-family: din-light,sans-serif;
+font-family: "Helvetica Neue",helvetica,sans-serif;
+text-transform: uppercase;
+ -webkit-transition: all .15s;
+transition: all .15s;
+}
+
+
   md-sidenav  md-list md-list-item:hover {
-    background: #555;
+    /*background: #2a2a2a;*/
+    background-color: #2a2a2a;
+    -webkit-transition: all .3s;
+    transition: all .3s;
   }
 
 /* Primary content area */
