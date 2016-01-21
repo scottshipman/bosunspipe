@@ -215,7 +215,7 @@ transition: all .15s;
 }
 
 md-list-item, md-list-item .md-list-item-inner {
-  min-height: 38px;
+  min-height: 30px;
 }
 
   md-sidenav  md-list md-list-item:hover {

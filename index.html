@@ -33,7 +33,7 @@
 
   <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
   md-component-id="left"
-  md-is-locked-open="$mdMedia('gt-sm')">
+  md-is-locked-open="$mdMedia('gt-md')">
 
   <md-toolbar class="md-whiteframe-z1">
     <h1>Project Black</h1>
@@ -49,53 +49,52 @@
   </md-toolbar>
 
   <md-list>
-    <md-list-item>
-      <md-button ng-click="feedSrc='http://news.ycombinator.com/rss';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://news.ycombinator.com/favicon.ico"> Hacker News
-      </md-button>
-    </md-list-item>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.networkworld.com/category/security/index.rss';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://www.networkworld.com/www.idge.nww/favicon.ico"> IDG News</md-button>
+      </md-list-item>
+    </a>
     <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.csoonline.com/index.rss';loadFeed($event)">
       <md-list-item>
         <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="app/assets/favicons/cso/favicon.ico"> CSO Online</md-button>
       </md-list-item>
     </a>
-    <md-list-item>
-      <md-button ng-click="feedSrc='http://feeds.feedburner.com/darknethackers';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.darknet.org.uk/favicon.ico"> DarkNet Hackers
-      </md-button>
-    </md-list-item>
-    <md-list-item>
-      <md-button ng-click="feedSrc='http://feeds.feedburner.com/TechCrunch/';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://techcrunch.com/favicon.ico"> TechCrunch
-      </md-button>
-    </md-list-item>
-    <md-list-item>
-      <md-button ng-click="feedSrc='http://feeds.arstechnica.com/arstechnica/features';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://arstechnica.com/favicon.ico"> ArsTechnica
-      </md-button>
-    </md-list-item>
-    <md-list-item>
-      <md-button ng-click="feedSrc='http://feeds2.feedburner.com/spylogic';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.spylogic.net/wp-content/themes/black-hat/images/favicon.ico"> Spy Logic</md-button>
-    </md-list-item>
-    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.networkworld.com/category/security/index.rss';loadFeed($event)">
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://krebsonsecurity.com/feed/';loadFeed($event)">
       <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.networkworld.com/www.idge.nww/favicon.ico"> IDG News</md-button>
-      </md-list-item>
-    </a>
-    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://feeds.feedburner.com/R362Pubs';loadFeed($event)">
-      <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.room362.com/favicon.ico"> Room 362</md-button>
-      </md-list-item>
-    </a>
-    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://blog.portswigger.net/feeds/posts/default';loadFeed($event)">
-      <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://blog.portswigger.net/favicon.ico"> Portswigger</md-button>
+        <md-button><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://krebsonsecurity.com/favicon.ico"> Krebs on Security</md-button>
       </md-list-item>
     </a>
     <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.wired.com/category/threatlevel/feed/';loadFeed($event)">
       <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://wired.com/favicon.ico"> Wired Security</md-button>
+        <md-button><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://wired.com/favicon.ico"> Wired Security</md-button>
+      </md-list-item>
+    </a>
+    <a style="text-decoration:none; color:white;"class="menu-item-link" href="" ng-click="feedSrc='http://feeds.feedburner.com/TechCrunch/';loadFeed($event)">
+    <md-list-item>
+      <md-button><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://techcrunch.com/favicon.ico"> TechCrunch
+      </md-button>
+    </md-list-item>
+    </a>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://feeds.arstechnica.com/arstechnica/features';loadFeed($event)"><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://arstechnica.com/favicon.ico"> ArsTechnica
+      </md-button>
+    </md-list-item>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://feeds2.feedburner.com/spylogic';loadFeed($event)"><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://www.spylogic.net/wp-content/themes/black-hat/images/favicon.ico"> Spy Logic</md-button>
+    </md-list-item>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://feeds.feedburner.com/R362Pubs';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://www.room362.com/favicon.ico"> Room 362</md-button>
+      </md-list-item>
+    </a>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://blog.portswigger.net/feeds/posts/default';loadFeed($event)">
+      <md-list-item>
+        <md-button><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://blog.portswigger.net/favicon.ico"> Portswigger</md-button>
       </md-list-item>
     </a>
     <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://threatpost.com/feed/';loadFeed($event)">
       <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/favicon.ico"> Threat Post</md-button>
+        <md-button><img style="max-width: 15px; margin-right: 17px; margin-left:20px;" src="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/favicon.ico"> Threat Post</md-button>
       </md-list-item>
     </a>
     <md-list-item>
@@ -104,28 +103,37 @@
     </md-list-item>
     <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.theregister.co.uk/security/headlines.atom';loadFeed($event)">
       <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.theregister.co.uk/favicon.ico"> The Register</md-button>
+        <md-button><img style="max-width: 20px; margin-right: 17px; margin-left:20px;" src="http://www.theregister.co.uk/favicon.ico"> The Register</md-button>
       </md-list-item>
     </a>
     <md-list-item>
-      <md-button ng-click="feedSrc='http://feeds.feedburner.com/JeremiahGrossman';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://jeremiahgrossman.blogspot.com/favicon.ico"> Jeremiah Grossman
+      <md-button ng-click="feedSrc='http://feeds.feedburner.com/JeremiahGrossman';loadFeed($event)"><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://jeremiahgrossman.blogspot.com/favicon.ico"> Jeremiah Grossman
       </md-button>
     </md-list-item>
     <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://rss.slashdot.org/Slashdot/slashdotMain';loadFeed($event)">
       <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://slashdot.org/favicon.ico"> SlashDot</md-button>
+        <md-button><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://slashdot.org/favicon.ico"> SlashDot</md-button>
       </md-list-item>
     </a>
-    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://krebsonsecurity.com/feed/';loadFeed($event)">
-      <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://krebsonsecurity.com/favicon.ico"> Krebs on Security</md-button>
-      </md-list-item>
-    </a>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://feeds.feedburner.com/darknethackers';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.darknet.org.uk/favicon.ico"> DarkNet Hackers
+      </md-button>
+    </md-list-item>
+    <md-list-item>
+      <md-button ng-click="feedSrc='http://news.ycombinator.com/rss';loadFeed($event)"><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://news.ycombinator.com/favicon.ico"> Hacker News
+      </md-button>
+    </md-list-item>
     <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.infosecisland.com/rss.html';loadFeed($event)">
       <md-list-item>
-        <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.infosecisland.com/favicon.ico"> InfoSec Island</md-button>
+        <md-button><img style="max-width: 17px; margin-right: 20px; margin-left:20px;" src="http://www.infosecisland.com/favicon.ico"> InfoSec Island</md-button>
       </md-list-item>
     </a>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://feeds2.feedburner.com/HelpNetSecurity';loadFeed($event)">
+    <md-list-item>
+      <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://www.net-security.org/favicon.ico"> Help Net Security
+      </md-button>
+    </md-list-item>
+  </a>
   </md-list>
 </md-sidenav>
 
@@ -149,10 +157,11 @@
           <md-card-title-media>
             <md-card-content>
               <h4>{{feed.title}}</h5>
-                <p style="text-decoration:none; color:white;">{{feed.contentSnippet}}</p>
+                <!-- <p style="text-decoration:none; color:white;">{{feed.contentSnippet}}</p> -->
+                <!-- <p style="text-decoration:none; color:white;">{{feed.content | htmlToPlaintext}}</p> -->
                 <!-- <p>{{feed.author}}</p> -->
                 <div ng-if="feed.mediaGroups[0].contents[0].url == undefined && feed.img == undefined">
-                  <!-- <p style="text-decoration:none; color:white;">{{feed.contentSnippet}}</p> -->
+                  <p style="text-decoration:none; color:white;">{{feed.contentSnippet}}</p>
                 </div>
                 <!-- <p>{{feed.categories}}</p>  -->
                 <!-- {{feed}} -->
@@ -197,8 +206,8 @@
     angular.module('RSSFeedApp', ['ngMaterial']);
   </script> -->
 
-  <!-- <script src="./src/users/UserController.js"></script>
-  <script src="./src/users/UserService.js"></script> -->
+  <script src="app/src/users/Users.js"></script>
+  <!--  <script src="./src/users/UserService.js"></script> --> -->
 
   <script type="text/javascript" src="app/src/angular.min.js">
 

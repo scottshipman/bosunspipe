@@ -1,6 +1,16 @@
+(function(){
+
 'use strict';
 
 var App = angular.module('RSSFeedApp', ['ngRoute']);
+
+angular.module('myApp.filters', []).
+  filter('htmlToPlaintext', function() {
+    return function(text) {
+      return angular.element(text).text();
+    }
+  }
+);
 
 App.controller("FeedCtrl", ['$scope','FeedService', function ($scope,Feed) {
     $scope.loadButonText="Load";
@@ -15,21 +25,14 @@ App.controller("FeedCtrl", ['$scope','FeedService', function ($scope,Feed) {
               // var img = content.find('img').src;
               var doesitwork = $(content).find('img').attr('src');
               console.log(doesitwork);
-              // console.log(doesitwork)
               // var firstImage = $(value.content).find('img').eq(0).attr('src');
               if ('undefined' !== typeof doesitwork) {
                 var imageField = $scope.feeds[key];
                 imageField.img = doesitwork;
-
-                // $scope.feeds[key].push(doesitwork);
-                // value.push({img : doesitwork});
                 console.log(imageField);
-                // console.log(key);
               }
             });
-          // var firstImage = $(findFirstImage).find('img').eq(0).attr('src');
-          // console.log(firstImage);
-          // $scope.firstImg = firstImage;
+
         });
     }
 }]);
@@ -41,3 +44,4 @@ App.factory('FeedService',['$http',function($http){
         }
     }
 }]);
+})();
