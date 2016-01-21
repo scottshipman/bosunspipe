@@ -37,14 +37,14 @@
 
   <md-toolbar class="md-whiteframe-z1">
     <h1>Project Black</h1>
-    <div class="social-icons-container">
+    <!-- <div class="social-icons-container">
       <a class="social-icons facebook" href="http://facebook.com" target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
       <a class="social-icons linkedin" href="htt://linkedin.com" target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
-    </div>
+    </div> -->
     <!-- <a class="social-icons" href="facebook.com"><i style="display: inline;" class="fa fa-facebook"></i></a> -->
   </md-toolbar>
 
@@ -148,10 +148,11 @@
           </div>
           <md-card-title-media>
             <md-card-content>
-              <h4 style="color: #555; text-decoration: none;">{{feed.title}}</h5>
+              <h4>{{feed.title}}</h5>
+                <p style="text-decoration:none; color:white;">{{feed.contentSnippet}}</p>
                 <!-- <p>{{feed.author}}</p> -->
                 <div ng-if="feed.mediaGroups[0].contents[0].url == undefined && feed.img == undefined">
-                  <p style="text-decoration:none; color:black; background-color:'#'++(Math.random()*0xFFFFFF<<0).toString(16);">{{feed.contentSnippet}}</p>
+                  <!-- <p style="text-decoration:none; color:white;">{{feed.contentSnippet}}</p> -->
                 </div>
                 <!-- <p>{{feed.categories}}</p>  -->
                 <!-- {{feed}} -->
