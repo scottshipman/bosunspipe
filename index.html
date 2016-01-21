@@ -156,12 +156,12 @@
           </div>
           <md-card-title-media>
             <md-card-content>
-              <h4>{{feed.title}}</h5>
+              <h4 style="color: rgba(255, 255, 255, 0.5);">{{feed.title}}</h4>
                 <!-- <p style="text-decoration:none; color:white;">{{feed.contentSnippet}}</p> -->
                 <!-- <p style="text-decoration:none; color:white;">{{feed.content | htmlToPlaintext}}</p> -->
                 <!-- <p>{{feed.author}}</p> -->
                 <div ng-if="feed.mediaGroups[0].contents[0].url == undefined && feed.img == undefined">
-                  <p style="text-decoration:none; color:white;">{{feed.contentSnippet}}</p>
+                  <p style="text-decoration:none; color:rgba(255, 255, 255, 0.5);">{{feed.contentSnippet}}</p>
                 </div>
                 <!-- <p>{{feed.categories}}</p>  -->
                 <!-- {{feed}} -->

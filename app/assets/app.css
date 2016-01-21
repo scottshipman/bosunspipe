@@ -22,7 +22,7 @@ html, body {
 }
 
 md-toolbar {
-  background-color: #212121;
+  background-color: #202020;
 }
 md-toolbar h1 {
   margin: auto;
@@ -95,7 +95,7 @@ md-toolbar a:active {
 }
 
 md-sidenav {
-  background-color: #212121;
+  background-color: #202020;
   color: white;
   height: 100%;
   position: fixed;
