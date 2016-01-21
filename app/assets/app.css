@@ -186,7 +186,7 @@ md-sidenav  md-list md-list-item {
 display: block;
 /*padding: 1em 0 .8em 20px;*/
 padding-top: 10px;
-padding-bottom: 10px;
+/*padding-bottom: 10px;*/
 position: relative;
 z-index: 5;
 text-align: left;
@@ -200,6 +200,9 @@ text-transform: uppercase;
 transition: all .15s;
 }
 
+md-list-item, md-list-item .md-list-item-inner {
+  min-height: 38px;
+}
 
   md-sidenav  md-list md-list-item:hover {
     /*background: #2a2a2a;*/
