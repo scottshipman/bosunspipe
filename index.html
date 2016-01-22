@@ -152,6 +152,13 @@
       </md-button>
     </md-list-item>
     </a>
+    <a style="text-decoration:none; color: white;"class="menu-item-link" href="" ng-click="feedSrc='http://www.techrepublic.com/rssfeeds/blog/it-security/
+';loadFeed($event)">
+    <md-list-item>
+      <md-button><img style="max-width: 20px; margin-right: 20px; margin-left:20px;" src="http://tr3.cbsistatic.com/fly/314-fly/bundles/techrepubliccore/favicon.ico"> Tech Republic
+      </md-button>
+    </md-list-item>
+    </a>
   </md-list>
 </md-sidenav>
 
@@ -162,6 +169,8 @@
 
   <md-toolbar layout="row" class="md-whiteframe-z1">
     <!-- <h1>Project Black</h1> -->
+    <!-- <input ng-repeat="sampleImage in sampleImages" type="text"/>
+<input type="button" value="test" ng-click="test()" /> -->
   </md-toolbar>
 
   <md-content flex id="content">
@@ -181,6 +190,10 @@
                 <div ng-if="feed.mediaGroups[0].contents[0].url == undefined && feed.img == undefined">
                   <p style="text-decoration:none; color:rgba(255, 255, 255, 0.5);">{{feed.contentSnippet}}</p>
                 </div>
+
+              <!-- <li ng-repeat: "sampleImage in sampleImages">
+                {{sampleImage}}
+              </li> -->
                 <!-- <p>{{feed.categories}}</p>  -->
                 <!-- {{feed}} -->
                 <!-- <p class="text-left">{{feed.contentSnippet}}</p> -->

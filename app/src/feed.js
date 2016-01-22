@@ -29,12 +29,19 @@ App.controller("FeedCtrl", ['$scope','FeedService', function ($scope,Feed) {
               if ('undefined' !== typeof doesitwork) {
                 var imageField = $scope.feeds[key];
                 imageField.img = doesitwork;
-                console.log(imageField);
+                // console.log(imageField);
               }
             });
 
         });
     }
+
+    $scope.sampleImages = [
+      {something: 'http://dweaay7e22a7h.cloudfront.net/dr-content_3/uploads/2015/01/Hacking2-650x360.jpg'},
+      {somethingelse: 'http://bullshit.com'}
+    ];
+    // $scope.test = ->
+    console.log($scope);
 }]);
 
 App.factory('FeedService',['$http',function($http){
