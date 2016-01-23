@@ -148,6 +148,7 @@ md-sidenav {
 md-card {
   background-color: #D0DBF1;
   border-radius: 25px;
+  position: relative;
 }
 
 h4.ng-binding {
@@ -155,7 +156,7 @@ h4.ng-binding {
   font-family: din-light,sans-serif;
   font-family: "Helvetica Neue",helvetica,sans-serif;
   text-decoration: none;
-  font-weight: 200 !important;
+  font-weight: 200
 
 }
 
@@ -230,7 +231,7 @@ md-list-item, md-list-item .md-list-item-inner {
 
 #content {
   overflow: hidden;
-  background-color: #3b5998;
+  background-color: #0077b5;
 }
 
 #content  {
@@ -277,6 +278,40 @@ md-button.menuBtn > md-icon {
 #content img {
   display: block;
   max-width: 500px;
+  min-height: 200px;
+}
+
+.feed-title {
+  color: white !important;
+  font-size: 1.6em;
+  font-weight: bolder;
+  text-shadow: 2px 1px #807D7D;
+  padding: .5em .5em .5em .5em;
+  font-family: serif;
+  background: rgba(3, 169, 244, 0.5);
+  margin-top: 0;
+  min-height:2.5em;
+}
+
+.feed-snippet {
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px gray;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: .5em .5em .5em .5em;
+
+}
+
+.feed-snippet-container {
+  position: absolute;
+  bottom: 0;
+  background: rgba(3, 169, 244, 0.5);
+
+}
+
+.content-text {
+  padding: 0;
 }
 
 /* Utils */
