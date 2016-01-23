@@ -36,7 +36,7 @@
   md-is-locked-open="$mdMedia('gt-md')">
 
   <md-toolbar class="md-whiteframe-z1">
-    <h1>Bosun's Pipe</h1>
+    <h1><img src = '/app/assets/images/bosuns-pipe-logo.png' alt="Bosun's Pipe" width="100%"></h1>
     <!-- <div class="social-icons-container">
       <a class="social-icons facebook" href="http://facebook.com" target="_blank">
         <i class="fa fa-facebook"></i>
@@ -124,17 +124,18 @@
 
       <a href="{{feed.link}}?ref=bisonspipe" target="_blank" style="text-decoration:none;">
         <md-card-title-media>
-          <h3 class="feed-title" style="color: #0a2098;">{{feed.title}}</h3>
+          <h3 class="feed-title" style="color: #0a2098;">{{feed.title}}{{feed.watermark}}</h3>
         </md-card-title-media>
         <md-card-content class="content-text">
 
-              <!--<div ng-if="feed.mediaGroups[0].contents[0].url == undefined && feed.img == undefined">-->
+            <div ng-if="feed.watermark" class="feed-watermark">
+                <p class="feed-watermark"><img src="/app/assets/images/bosuns-pipe-image.png" height="50%"</p>
+            </div>
+
            <div ng-if="feed.contentSnippet" class="feed-snippet-container">
                   <p class="feed-snippet">{{feed.contentSnippet}}</p>
            </div>
-              <!--<ul>Categories:-->
-                <!--<li ng-repeat="category in feed.categories | filter:filterText">{{category}}</li>-->
-              <!--</ul>-->
+
         </md-card-content>
 
         </a>

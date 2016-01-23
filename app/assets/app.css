@@ -310,6 +310,18 @@ md-button.menuBtn > md-icon {
 
 }
 
+.feed-watermark {
+    opacity: .5;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.feed-watermark img {
+    position: relative;
+    height: 60px;
+    top: -3em;
+}
+
 .content-text {
   padding: 0;
 }

@@ -24,22 +24,19 @@ App.controller("FeedCtrl", ['$scope','FeedService', function ($scope,Feed) {
                 var imgcount = Object.keys(backgroundImages).length;
                 var num = Math.floor(Math.random() * ((imgcount -1) + 1));
                 var imageField = $scope.feeds[key];
-                imageField.img = '/app/assets/images/backgrounds/'+ backgroundImages[num];
-
+                //imageField.img = '/app/assets/images/backgrounds/'+ backgroundImages[num];
+                imageField.watermark = true;
                 // if feed has an image use it instead
                 var content = document.createElement('div');
                 content.innerHTML = value.content;
-                //console.log(content);
                 var imgs = $(content).find('img');
                 $(imgs).each(function(index){
-                    console.log(imgs[index]);
                   if($(imgs[index]).attr('src').indexOf('feedblitz') == -1 && $(imgs[index]).attr('src').indexOf('feedburner') == -1 ) {
                     console.log($(imgs[index]).attr('src').indexOf('feedblitz') + ' supposed to not be feed ' + $(imgs[index]).attr('src'));
                       var imageField = $scope.feeds[key];
                       imageField.img = $(imgs[index]).attr('src');
+                      imageField.watermark = false;
                     return false;
-                  } else {
-                      console.log('else image ' + $(imgs[index]).attr('src'));
                   }
                 });
             });
