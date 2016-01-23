@@ -95,7 +95,7 @@ md-toolbar a:active {
 }
 
 md-sidenav {
-  background-color: #202020;
+  background-color: #0077b5;
   color: white;
   height: 100%;
   position: fixed;
@@ -146,7 +146,7 @@ md-sidenav {
 }
 
 md-card {
-  background-color: #3b5998;
+  background-color: #D0DBF1;
   border-radius: 25px;
 }
 
