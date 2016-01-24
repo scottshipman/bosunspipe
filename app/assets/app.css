@@ -31,14 +31,27 @@ md-toolbar h1 {
   font-family: din-light,sans-serif;
   font-family: "Helvetica Neue",helvetica,sans-serif;
   font-weight: 200;
+    display: inline;
 }
 
 md-toolbar .social-icons-container{
   height: 45px;
   margin: 0 auto 5px;
+    display: inline;
+    float:right;
+    margin-top: 1em;
+}
+
+md-toolbar .toolbar-container {
+    display: inline;
+    margin: 0 auto;
+    height: 45px;
+    width: 100%;
 
 }
+
 md-toolbar .social-icons {
+    float:right;
   padding: 10px;
   position: relative;
   margin: 0 5px;
@@ -282,6 +295,7 @@ md-button.menuBtn > md-icon {
 }
 
 .feed-title {
+    display: inline;
   color: white !important;
   font-size: 1.6em;
   font-weight: bolder;
@@ -291,6 +305,7 @@ md-button.menuBtn > md-icon {
   background: rgba(3, 169, 244, 0.5);
   margin-top: 0;
   min-height:2.5em;
+
 }
 
 .feed-snippet {
@@ -337,6 +352,7 @@ md-button.menuBtn > md-icon {
 md-toolbar h1 {
   font-size: 1.250em;
   font-weight: 400;
+    margin-left: 45%;
 }
 
 .avatar {
